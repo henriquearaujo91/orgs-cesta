@@ -1,5 +1,6 @@
 import { Montserrat_400Regular, Montserrat_700Bold, useFonts } from '@expo-google-fonts/montserrat';
-import { SafeAreaView, StatusBar, View } from 'react-native';
+import AppLoading from 'expo-app-loading';
+import { SafeAreaView, StatusBar } from 'react-native';
 
 
 import mockTextoCesta from './src/mocks/cesta';
@@ -12,7 +13,7 @@ export default function App() {
   });
 
   if (!fonteCarregada) {
-    return <View />
+    return <AppLoading />
   }
 
   return (
