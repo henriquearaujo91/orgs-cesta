@@ -1,13 +1,14 @@
 import { StyleSheet, View } from "react-native";
 
+import { TextoCesta } from "../../mocks/interfaces";
 import Detalhes from "./componentes/Detalhes";
 import Topo from "./componentes/Topo";
 
-export default function Cesta() {
+export default function Cesta(textoCesta: TextoCesta) {
     return <>
-        <Topo />
+        <Topo {...textoCesta} />
         <View style={estilos.cesta}>
-            <Detalhes />
+            <Detalhes {...textoCesta} />
         </View>
 
     </>

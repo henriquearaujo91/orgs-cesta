@@ -1,16 +1,16 @@
 import { Dimensions, Image, StyleSheet } from "react-native";
 
-import topo from "../../../../assets/topo.png";
 import Texto from "../../../componentes/Texto";
+import { TextoCesta } from "../../../mocks/interfaces";
 
 const widthScreen = Dimensions.get("screen").width;
 const heightImage = 578;
 const widthImage = 768;
 
-export default function Topo() {
+export default function Topo(textoCesta: TextoCesta) {
     return <>
-        <Image source={topo} style={estilos.topo} />
-        <Texto style={estilos.titulo}>Detalhe da cesta</Texto>
+        <Image source={textoCesta.topo.imagem} style={estilos.topo} />
+        <Texto style={estilos.titulo}>{textoCesta.topo.titulo}</Texto>
     </>
 }
 
