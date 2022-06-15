@@ -1,4 +1,4 @@
-import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
+import { Image, StyleSheet, View } from "react-native";
 
 import Texto from "../../../componentes/Texto";
 import { TextoCesta } from "../../../mocks/interfaces";
@@ -17,7 +17,7 @@ export default function Detalhes(textoCesta: TextoCesta) {
             {textoCesta.detalhes.descricao}
         </Texto>
         <Texto style={estilos.preco}>{textoCesta.detalhes.preco}</Texto>
-        <Botao {...textoCesta} />
+        <Botao style={estilos.botao} onPress={() => { console.log("OLA!") }}> {textoCesta.detalhes.botao}</Botao>
     </>
 }
 
@@ -52,5 +52,8 @@ const estilos = StyleSheet.create({
         fontSize: 26,
         lineHeight: 42,
         marginTop: 8
+    },
+    botao: {
+        marginTop: 16
     }
 })
