@@ -2,7 +2,7 @@ import { StyleSheet, Text, TextStyle } from "react-native";
 
 type Props = {
     children: React.ReactNode;
-    style: TextStyle;
+    style?: TextStyle;
 }
 
 export default function Texto({ children, style }: Props) {

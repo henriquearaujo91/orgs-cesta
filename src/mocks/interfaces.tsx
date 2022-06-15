@@ -12,4 +12,13 @@ export interface TextoCesta {
         descricao: string;
         preco: string;
     };
+    itens: {
+        titulo: string;
+        lista: Array<ItemCesta>;
+    };
+}
+
+export interface ItemCesta {
+    nome: string;
+    imagem: ImageProps;
 }
