@@ -11,6 +11,7 @@ export interface TextoCesta {
         nomeFazenda: string;
         descricao: string;
         preco: string;
+        botao: string;
     };
     itens: {
         titulo: string;

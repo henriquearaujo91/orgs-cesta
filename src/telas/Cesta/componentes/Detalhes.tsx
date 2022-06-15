@@ -2,6 +2,7 @@ import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
 
 import Texto from "../../../componentes/Texto";
 import { TextoCesta } from "../../../mocks/interfaces";
+import Botao from "./Botao";
 
 export default function Detalhes(textoCesta: TextoCesta) {
 
@@ -16,9 +17,7 @@ export default function Detalhes(textoCesta: TextoCesta) {
             {textoCesta.detalhes.descricao}
         </Texto>
         <Texto style={estilos.preco}>{textoCesta.detalhes.preco}</Texto>
-        <TouchableOpacity style={estilos.botao} onPress={() => {console.log("ola!!!")}}>
-            <Texto style={estilos.textoBotao}>{textoCesta.detalhes.botao}</Texto>
-        </TouchableOpacity>
+        <Botao {...textoCesta} />
     </>
 }
 
@@ -53,18 +52,5 @@ const estilos = StyleSheet.create({
         fontSize: 26,
         lineHeight: 42,
         marginTop: 8
-    },
-    botao: {
-        marginTop: 16,
-        backgroundColor: "#2A9F85",
-        paddingVertical: 16,
-        borderRadius: 6
-    },
-    textoBotao: {
-        textAlign: "center",
-        color: "#FFFFFF",
-        fontSize: 16,
-        lineHeight: 26,
-        fontWeight: "bold"
     }
 })
