@@ -27,22 +27,27 @@ const cesta: TextoCesta = {
         titulo: "Itens da cesta",
         lista: [
             {
+                cod: 1,
                 nome: "Tomate",
                 imagem: tomate,
             },
             {
+                cod: 2,
                 nome: "Brócolis",
                 imagem: brocolis,
             },
             {
+                cod: 3,
                 nome: "Batata",
                 imagem: batata,
             },
             {
+                cod: 4,
                 nome: "Pepino",
                 imagem: pepino,
             },
             {
+                cod: 5,
                 nome: "Abóbora",
                 imagem: abobora,
             }

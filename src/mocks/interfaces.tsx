@@ -20,6 +20,7 @@ export interface TextoCesta {
 }
 
 export interface ItemCesta {
+    cod: number;
     nome: string;
     imagem: ImageProps;
 }
